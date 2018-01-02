@@ -18,7 +18,7 @@ for ani in list:
     title = a_tag.findChild("a").get_text()
 
     up_date = pattern_date.search( info.get_text().strip()).group(0).replace("/", "-") 
-    today = datetime.date.today() - datetime.timedelta(4)
+    today = datetime.date.today() - datetime.timedelta(1)
 
     if up_date == today.__str__():
         print(up_date + ",  " + today.__str__())
