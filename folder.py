@@ -129,7 +129,33 @@ list[2][55] = "Taishou Mebiusline - Chicchai-san";
 list[2][56] = "The Idolmaster SideM";
 list[2][57] = "Time Bokan - Gyakushuu no San-Okunin";
 list[2][58] = "TsukiPro The Animation";
+list[2][59] = "Itsudatte Bokura no Koi wa 10 Centi Datta";
 
+list[3][0] = "2018-1";
+list[3][1] = "Idolish Seven";
+list[3][2] = "Sora Yori mo Tooi Basho";
+list[3][3] = "25-sai no Joshikousei";
+list[3][4] = "Basilisk£º Ouka Ninpouchou";
+list[3][5] = "Citrus";
+list[3][6] = "Gakuen Babysitters";
+list[3][7] = "Grancrest Senki";
+list[3][8] = "Itou Junji£º Collection";
+list[3][9] = "Jian Wangchao";
+list[3][10] = "Karakai Jouzu no Takagi-san";
+list[3][11] = "Kokkoku";
+list[3][12] = "Mitsuboshi Colors";
+list[3][13] = "Nanatsu no Taizai£º Imashime no Fukkatsu";
+list[3][14] = "Pochitto Hatsumei£º Pikachin-Kit";
+list[3][15] = "Ramen Daisuki Koizumi-san";
+list[3][16] = "Ryuuou no Oshigoto!";
+list[3][17] = "Sanrio Danshi";
+list[3][18] = "Shinkansen Henkei Robo Shinkalion The Animation";
+list[3][19] = "Slow Start";
+list[3][20] = "Toji no Miko";
+list[3][21] = "Yowamushi Pedal£º Glory Line";
+list[3][22] = "Yuru Camp¡â ";
+list[3][23] = "Zoku Touken Ranbu£º Hanamaru";
+list[3][24] = "gdMen(gdgd men¡¯s party)";
 
 def makeDir(nm):
     check = True
