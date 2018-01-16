@@ -193,6 +193,7 @@ def mainRun():
         if( makeDir(fNm) ):
             os.mkdir(fNm)
         os.chdir("../")   
+        print(f, "./"+upperNm + "/" + fNm)
         shutil.move(f, "./"+upperNm + "/" + fNm)
 
 files = glob.glob("*.mp4")
