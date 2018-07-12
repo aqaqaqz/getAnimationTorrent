@@ -2,16 +2,16 @@ import os
 import glob
 import shutil
 import re
-from tkinter import *
 import pickle
-import datetime, time
+import datetime
 
 readF = open('./list.txt', 'rb')
 add = False
 
-list = [[0 for col in range(60)] for row in range(10)]
+list = [[0 for col in range(100)] for row in range(50)]
 list = pickle.load(readF)
-print(list)
+#print(list)
+
 readF.close()
 
 def makeDir(nm):
@@ -62,7 +62,7 @@ def getQuarter():
         v_quarter += "-3"
     elif(v_month >= 9 and v_month <=11):
         v_quarter += "-4"
-    
+
     index = getQuarterIndex(v_quarter)
     if(index == -1):
         addQuarter(v_quarter)
@@ -78,22 +78,25 @@ def mainRun():
     for f in files:
         fNm = f
         fNm = fNm.replace("[Leopard-Raws]", "")
+	fNm = fNm.replace("[Ohys-Raws]", "")
         episodeNum = episodePattern.search(pattern.search(fNm).group(0)).group(0)
         
         fNm = fNm.replace(pattern.search(fNm).group(0), "")
         fNm = fNm.replace(".", "")
         fNm = fNm.strip()
         quarterNm = getQuarterNm(fNm)
-        
+
         if(quarterNm == "etc" and (episodeNum=="00" or episodeNum=="01" or episodeNum=="02" or episodeNum=="03")):
             quarterNm = getQuarter()
             addTitle(quarterNm, fNm)
             
             writeF = open('./list.txt', 'wb')
-            print(list)
+            print("list update")
+            #print(list)
             pickle.dump(list, writeF)
             writeF.close()
             
+        print(quarterNm + ", " + fNm)
         if(makeDir(quarterNm)):
             os.mkdir(quarterNm)
         os.chdir(quarterNm)
