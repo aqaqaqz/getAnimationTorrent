@@ -1,1 +1,1 @@
-# getLeopardTorrent
+# get animation torrent files automatically 
