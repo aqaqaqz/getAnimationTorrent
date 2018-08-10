@@ -104,7 +104,11 @@ def mainRun():
         if( makeDir(fNm) ):
             os.mkdir(fNm)
         os.chdir("../")   
-        shutil.move(f, "./"+quarterNm + "/" + fNm)
+        
+        
+        if os.path.isfile("./" + quarterNm + "/" + fNm + "/" + f) :
+            os.remove("./" + quarterNm + "/" + fNm + "/" + f)
+        shutil.move(f, "./"+quarterNm + "/" + fNm)   
 
 files = glob.glob("*.mp4")
 mainRun()
