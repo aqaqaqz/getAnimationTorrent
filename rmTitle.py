@@ -20,21 +20,21 @@ def getQuarterIndex(q):
         index += 1
     return -1
 
-def addTitle(q, t):
-    #해당분기 마지막에 타이틀 추가
+def rmTitle(q, t):
+    #해당분기 타이틀 삭제
     qIndex = getQuarterIndex(q)
     tIndex = 0
     for title in list[qIndex]:
-        if(title == 0):
-            list[qIndex][tIndex] = t;
+        if(title == t):
+            list[qIndex][tIndex] = None;
             return
         tIndex += 1
         
 def mainRun():
     print("mainRun");
     
-    #quarterNm = '2018-2'
-    #addTitle(quarterNm, 'Amanchu!')
+    quarterNm = '2018-1'
+    rmTitle(quarterNm, 'Strike the Blood III')
     
     writeF = open('./list.txt', 'wb')
     print("리스트 갱신")

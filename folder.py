@@ -53,6 +53,9 @@ def addTitle(q, t):
 def getQuarter():
     v_year = datetime.date.today().timetuple().tm_year
     v_month = datetime.date.today().timetuple().tm_mon
+    if(v_month == 12):
+        v_year += 1
+
     v_quarter = str(v_year)
     if(v_month==12 or v_month==1 or v_month == 2):
         v_quarter += "-1"
