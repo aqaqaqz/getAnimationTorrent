@@ -1,4 +1,4 @@
-import os
+﻿import os
 import glob
 import shutil
 import re
@@ -7,7 +7,7 @@ import datetime
 
 readF = open('./list.txt', 'rb')
 
-list = [[0 for col in range(60)] for row in range(10)]
+list = [[0 for col in range(100)] for row in range(50)]
 list = pickle.load(readF)
 print(list)
 readF.close()
